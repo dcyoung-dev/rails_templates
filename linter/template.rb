@@ -7,6 +7,8 @@ end
 
 run 'bundle install'
 
+run 'cp $(i18n-tasks gem-path)/templates/config/i18n-tasks.yml config/'
+
 run 'yarn add standard stylelint stylelint-config-standard-scss --dev'
 
 file '.stylelintrc.json', <<~CODE
@@ -51,9 +53,10 @@ file 'bin/lint_fix', <<~CODE
 
     puts '== Fixing JS =='
     system! 'yarn lint:javascript:fix'
+
+    puts '== Fixing CSS =='
+    system! 'yarn lint:css:fix'
   end
 CODE
 
 run 'chmod +x bin/lint_fix'
-
-run 'cp $(i18n-tasks gem-path)/templates/config/i18n-tasks.yml config/'
