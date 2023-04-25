@@ -8,6 +8,12 @@ Adds lint fixers to an existing Rails app for
 
 ## Installation
 
-From your existing Rails application root rub
+From your existing Rails application root run
 
 `rails app:template LOCATION=https://raw.githubusercontent.com/dcyoung-dev/rails_templates/main/linter/template.rb`
+
+## Usage
+
+From your existing Rails application root run
+
+`bin/lint_fix`
