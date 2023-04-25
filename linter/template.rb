@@ -20,8 +20,8 @@ CODE
   lint_javascript: "\n    \"lint:javascript\": \"yarn standard\",",
   fix_css: "\n    \"lint:css:fix\": \"yarn stylelint 'app/assets/stylesheets/**/*.scss' --fix\",",
   lint_css: "\n    \"lint:css\": \"yarn stylelint 'app/assets/stylesheets/**/*.scss'\",",
-  fix: "\n    \"lint:fix\": \"yarn lint:css:fix && yarn lint:javascript:fix\"",
-  lint: "\n    \"lint\": \"yarn lint:css && yarn lint:javascript\""
+  fix: "\n    \"lint:fix\": \"yarn lint:css:fix && yarn lint:javascript:fix\",",
+  lint: "\n    \"lint\": \"yarn lint:css && yarn lint:javascript\","
 }.each_value do |script|
   inject_into_file('package.json', script, after: '  "scripts": {')
 end
