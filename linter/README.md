@@ -10,4 +10,4 @@ Adds lint fixers to an existing Rails app for
 
 From your existing Rails application root rub
 
-`rails app:template LOCATION=<TBC>`
+`rails app:template LOCATION=https://raw.githubusercontent.com/dcyoung-dev/rails_templates/main/linter/template.rb`
